@@ -104,54 +104,70 @@ $(document).ready(function() {
 			return true; 
 	}
 	
-	function validaPIS(Numero,Digito){
+	// VERIFICAR O PIS
+
+	var ftap="3298765432";
+	var total=0;
+	var i;
+	var resto=0;
+	var numPIS=0;
+	var strResto="";
 	
-	for (i=0; i<Numero.length; i++)
+	function ChecaPIS(pis)
 	{
-	  Numero = Numero.replace('.','');
-	  Numero = Numero.replace('-','');
-	}
-
-	var PASEP = Numero
-	var peso1 = '3298765432';
-	var soma1 = 0;
-	var digito1 = 0;
-
-	for (i = 1; i < 10 - Numero.length+1; i++) 
+	
+	total=0;
+	resto=0;
+	numPIS=0;
+	strResto="";
+	
+	numPIS=pis;
+	
+	if (numPIS=="" || numPIS==null)
 	{
-		PASEP = eval("'" + 0 + PASEP + "'")
+	return false;
 	}
-	for (i = 1; i < PASEP.length+1; i++) 
+	
+	for(i=0;i<=9;i++)
 	{
-		soma1 += PASEP.substring(i, i-1) * peso1.substring(i, i-1);
-	} 
-	soma1 %= 11;
-	if (soma1  < 2) 
+	resultado = (numPIS.slice(i,i+1))*(ftap.slice(i,i+1));
+	total=total+resultado;
+	}
+	
+	resto = (total % 11)
+	
+	if (resto != 0)
 	{
-		digito1 = 0;
+	resto=11-resto;
 	}
-		else {
-		digito1 = 11 - soma1; 
-	}
-	if (eval("'" + digito1 +"'") != Digito)
+	
+	if (resto==10 || resto==11)
 	{
-		return false;
+	strResto=resto+"";
+	resto = strResto.slice(1,2);
 	}
-	else {
-		return true;
+	
+	if (resto!=(numPIS.slice(10,11)))
+	{
+	return false;
+	}
+	
+	return true;
+	}
+	
+	// VALIDAR O PIS
+	
+	function ValidaPis()
+	{
+	pis=document.cadastro.numPIS.value;
+	
+	if (!ChecaPIS(pis))
+	{
+	alert("PIS INVALIDO");
+	} else {
+	alert("PIS VALIDO");
 	}
 	}
-	//ADICIONAR ONKEYPRESS NO TEXT DO PIS mascara_pis(this)
-	function mascara_pis(campo) {
-	if (campo.value.length == 1)
-	{ campo.value += "."; }
-	if (campo.value.length == 5)
-	{ campo.value += "."; }
-	if (campo.value.length == 9)
-	{ campo.value += "."; }
-	if (campo.value.length == 13)
-	{ campo.value += "-"; }
-}
 	
 	
 
