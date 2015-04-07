@@ -1,0 +1,45 @@
+body{
+	margin-left: 500px;
+	margin-right: 480px;
+	margin-top: 110px;
+	/*background-color: #ccc;*/
+}
+p{
+	 font: oblique bold 120% Patchwork Letter; 
+}
+#layercad{
+ line-height:0; /* correção para IE */
+ width:100;
+ height:100;
+ border: 50px solid;
+ border-color: #f00 #0f0 #0f0 #fc0;
+}
+#papalelguas{
+	width: 350px;
+	height: 450px;
+	background-color: #ccc;
+}
+#zaza{
+	margin-left: 40px;
+}
+#listItems{
+	margin-left: 150px;
+}
+.tamanhobtn{
+	width: 190px;
+}
+#textbox {
+	margin-left: 75px;
+}
+#txtTitulo{
+	margin-left: 22px;
+}
+#txtTitulo:hover{
+	background-color: #ccc;
+}
+#txtEditora{
+	margin-left: 15px;
+}
+#txtEditora:hover{
+	background-color: #ccc;
+}

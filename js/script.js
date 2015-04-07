@@ -3,6 +3,10 @@ var i = 0;
 
 $(document).ready(function() { 
 
+	$("#btIncluir").click(function(){
+		$('#layercad').hide();
+	});
+
 	$("#btIncluir").click(function () {
 		var item = new Object();
 
