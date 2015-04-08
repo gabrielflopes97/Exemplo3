@@ -1,25 +1,73 @@
 body{
-	margin-left: 500px;
-	margin-right: 480px;
-	margin-top: 110px;
+	/*margin-left: 450px;*/
+	/*margin-right: 480px;*/
+	/*margin-top: 110px;*/
 	/*background-color: #ccc;*/
 }
 p{
 	 font: oblique bold 120% Patchwork Letter; 
 }
-#layercad{
- line-height:0; /* correção para IE */
- width:100;
- height:100;
- border: 50px solid;
- border-color: #f00 #0f0 #0f0 #fc0;
+.close{
+  position:relative;
+  width:0.3em;
+  height:1.5em;
+  top:5px;
+  left: -20px;
+  background: black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+font-size: 22px;
+}
+.close:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:0.3em;
+  height:1.5em;
+  background: black;
+  -webkit-transform: rotate(-90deg);
+  /*-moz-transform: rotate(-90deg);*/
+  /*-o-transform: rotate(-90deg);*/
+  /*-ms-transform: rotate(-90deg);*/
+  /*transform: rotate(-90deg);*/
+}
+#blockpag{
+display: none;
+background-color:black;
+opacity:0.5;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+margin-left:0px;
+margin-top:0px;
+text-align:center;
+}
+#layer{
+display: none;
+background-color:#ccc;
+position:fixed;
+top:50%;
+left:45%;
+width:450px;
+height:200px;
+margin-left:-150px;
+margin-top:-100px;
+text-align:center;
 }
 #papalelguas{
+	margin-left: 350px;
 	width: 350px;
 	height: 450px;
-	background-color: #ccc;
+	/*background-color: #ccc;*/
 }
-#zaza{
+/*#zaza{
 	margin-left: 40px;
 }
 #listItems{
@@ -42,4 +90,4 @@ p{
 }
 #txtEditora:hover{
 	background-color: #ccc;
-}
+}*/
