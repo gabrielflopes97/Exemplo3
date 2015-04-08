@@ -1,8 +1,57 @@
 var items = [];
 var i = 0;
 
-$(document).ready(function() { 
+$(document).ready(function() {
 
+	$('input').blur(function(){
+    if($(this).val()=="" || $(this).val()== undefined ){
+      $(this).addClass("erro");
+      $(this).focus();
+      //bloqueio($(this))
+    }else{
+    	$(this).removeClass("erro");
+    	//validaçoes obrigatorias 
+    	switch($(this).attr("name")){
+    			case "cpf":
+
+    		if(TestaCPF($(this).val())){
+    			$(this).addClass("ok");
+    		}else{
+    			$(this).focus();
+    			alert("campo incorreto");
+    		}
+    		break;
+    		
+    			case :
+    				
+    		break;
+    		
+    			case :
+    		
+    		break;
+    		
+    			case :
+    		
+    		break;
+    		
+    			case :
+    		
+    		break;
+    		
+    			case :
+    		
+    		break;
+    		case :
+    		break;
+    			
+    	}
+    	//validaçoes nao obrigatorias
+    	// pis  ValidaPis($(this).val())
+    }
+
+  });
+
+	
 	$("#btIncluir").click(function(){
 		$('#layercad').hide();
 	});
@@ -161,9 +210,9 @@ $(document).ready(function() {
 	
 	// VALIDAR O PIS
 	
-	function ValidaPis()
+	function ValidaPis(pis)
 	{
-	pis=document.cadastro.numPIS.value;
+	
 	
 	if (!ChecaPIS(pis))
 	{

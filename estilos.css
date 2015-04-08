@@ -2,10 +2,22 @@ body{
 	margin-left: 500px;
 	margin-right: 480px;
 	margin-top: 110px;
-	/*background-color: #ccc;*/
+
+	
 }
 p{
 	 font: oblique bold 120% Patchwork Letter; 
+}
+input:focus{
+	outline:0;
+
+}
+.erro{
+	border:1px solid red;
+
+}
+.ok{
+	border:1px solid green;
 }
 #layercad{
  line-height:0; /* correção para IE */
