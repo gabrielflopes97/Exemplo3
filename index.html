@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
         rel="stylesheet" type="text/css">
         <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
         rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="estilos.css">
         <script type="text/javascript" src="js/script.js"></script>
         <link rel="stylesheet" type="text/css" href="estilos.css">
     </head>
@@ -28,7 +30,12 @@
                                 <form action="Script_do_Formulario.php" method="post">
 
 <!-- DADOS PESSOAIS-->
+<<<<<<< HEAD
 <!-- <fieldset>
+=======
+<fieldset>
+
+>>>>>>> origin/master
  <legend>Dados Pessoais</legend>
  <table cellspacing="10">
   <tr>
@@ -50,7 +57,16 @@
     <label>CPF:</label>
    </td>
    <td align="left">
-    <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+    <input type="text" name="cpf" size="11" maxlength="11"> 
+   </td>
+  </tr>
+ </table>
+ <tr>
+   <td>
+    <label>PIS:</label>
+   </td>
+   <td align="rigth">
+    <input type="number" name="pis" size="11" maxlength="11"> 
    </td>
   </tr>
  </table>
@@ -73,7 +89,7 @@
     <label for="numero">Numero:</label>
    </td>
    <td align="left">
-    <input type="text" name="numero" size="4">
+    <input type="number" name="numero" size="4">
    </td>
   </tr>
   <tr>
@@ -133,12 +149,13 @@
     <label for="cep">CEP: </label>
    </td>
    <td align="left">
-    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+    <input type="number" name="cep" size="8" maxlength="8">
    </td>
   </tr>
  </table>
 </fieldset>
 <br />
+<<<<<<< HEAD
  -->
 <!-- DADOS DE LOGIN -->
 <!-- <fieldset>
@@ -178,6 +195,9 @@
   </tr>
  </table>
 </fieldset>
+=======
+
+>>>>>>> origin/master
 <br />
 <input type="submit">
 <input type="reset" value="Limpar">
