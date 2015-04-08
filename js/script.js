@@ -4,9 +4,14 @@ var i = 0;
 $(document).ready(function() { 
 
 	$("#btIncluir").click(function(){
-		$('#layercad').hide();
-	});
+		$('#blockpag').show();
+		$('#layer').show();
+	});  
 
+	$('.close').click(function(){
+		$('#layer').hide();
+		$('#blockpag').hide();
+	});
 	$("#btIncluir").click(function () {
 		var item = new Object();
 
