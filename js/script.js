@@ -22,7 +22,7 @@ $(document).ready(function() {
     		}
     		break;
     		
-    			case :
+    		/*	case :
     				
     		break;
     		
@@ -42,7 +42,7 @@ $(document).ready(function() {
     		
     		break;
     		case :
-    		break;
+    		break;*/
     			
     	}
     	//validaçoes nao obrigatorias
